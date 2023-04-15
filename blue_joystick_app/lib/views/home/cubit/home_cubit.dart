@@ -73,7 +73,7 @@ class HomeCubit extends Cubit<HomeState> {
     if (_joystickValue.compareXAxisValue(xValue)) {
       final newValue = _joystickValue.copyWith(x: xValue);
       if (newValue != _joystickValue) {
-        Future.delayed(const Duration(milliseconds: 200)).then((value) {
+        Future.delayed(const Duration(milliseconds: 400)).then((value) {
           _blueService.send(_joystickValue.messageBlue());
           // xValue.log(tag: "xValue");
         });
@@ -88,7 +88,7 @@ class HomeCubit extends Cubit<HomeState> {
     if (_joystickValue.compareYAxisValue(yValue)) {
       final newValue = _joystickValue.copyWith(y: yValue);
       if (newValue != _joystickValue) {
-        Future.delayed(const Duration(milliseconds: 200)).then((value) {
+        Future.delayed(const Duration(milliseconds: 400)).then((value) {
           _blueService.send(_joystickValue.messageBlue());
           // yValue.log(tag: "yValue");
         });
