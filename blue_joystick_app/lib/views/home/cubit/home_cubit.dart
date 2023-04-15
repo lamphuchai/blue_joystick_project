@@ -56,10 +56,8 @@ class HomeCubit extends Cubit<HomeState> {
           case BluetoothDeviceState.connected:
             emit(state.copyWith(isConnect: true));
             break;
-
           default:
             emit(state.copyWith(isConnect: false));
-
             break;
         }
       });
